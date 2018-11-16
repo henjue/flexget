@@ -1,0 +1,31 @@
+web_server: yes
+schedules:
+    - tasks: '*'
+      interval:
+          minutes: 30
+
+tasks:
+    pt99:
+        no_entries_ok: yes
+        rss: https://pt.j99.info/torrentrss.php
+        download: /downloads/
+        accept_all: yes
+        content_size:
+            min: 1024
+            max: 153600
+            strict: no
+        free_space:
+            path: /downloads/
+            space: 2048
+    hdsky:
+        no_entries_ok: yes
+        rss: https://hdsky.me/torrentrss.php
+        download: /downloads/
+        accept_all: yes
+        content_size:
+            min: 1024
+            max: 153600
+            strict: no
+        free_space:
+            path: /downloads/
+            space: 2048

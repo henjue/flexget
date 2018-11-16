@@ -1,0 +1,11 @@
+version: '3'
+services:
+    flexget:
+        env_file:
+            - .env
+        build: .
+        ports:
+            - '5080:5050'
+        volumes:
+            - './config:/config'
+            - './downloads:/downloads'
